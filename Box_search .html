@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+            #bag{
+              position:absolute;
+              top:150px;
+              left:300px;
+              width:50%;
+              border:3px solid;
+              padding: 30px;
+              margin:auto;
+      
+            }
+      
+            #bag_2{
+              position:absolute;
+              top:175px;
+              left:900px;
+      
+              margin:auto;
+      
+            }
+            #cardboard{position:absolute;
+              top:250px;
+              left:300px;
+      
+            }
+            #pizza{position:absolute;
+              top:500px;
+              left:320px;
+      
+            }
+            /* #shopping{position:absolute;
+              top:750px;
+              left:300px; */
+      
+            /* } */
+            /* #depot{position:absolute;
+              top:750px;
+              left:850px;
+      
+            } */
+            #recycle{position:absolute;
+              top:220px;
+              left:850px;
+      
+            }
+            #another{position:absolute;
+              top:470px;
+              left:870px;
+      
+            }
+            
+            </style>
+</head>
+
+    <body>
+
+            <header>
+                    <div class = "menuBar">
+                        <a id = 'recycleThat' style = "font-size: 36px">recycle.that  </a>
+                        <a id = 'home'>Home</a>
+                        <a id = "about">About</a>
+                        <a id = "recycle">Recycle</a>
+                        <input type="text" placeholder="Search..">
+                    </div>
+            </header>
+            <img id="cardboard" src="./images/cardboard.jpg" width="150" heigh="200">
+            <img id="pizza" src="./images/pizza.png", width="150" heigh="200">
+            <img id="recycle" src="./images/recycle.jpg" width="150" heigh="200">
+            <img id="another" src="./images/compost.jpg" width="150" heigh="200">
+     
+           <p1 id="bag"><b>Click</b></p1>
+           <p2 id="bag_2"></p2>
+
+     
+             <script>
+         
+             var data={
+           "bag" : {
+                 "chip" : {"name":"chip",
+                         "picture":"chip.jpg",
+                        "location" : "garbage",
+                        "type" : "Type: plastic",
+                        "picture_1":"garbage.jpg",
+                            },
+                 "paper_bag" : {"name":"paper_bag",
+                         "picture":"paper.jpg",
+                       "location" : "recycling bin",
+                        "type" : "Type: paper",
+                        "picture_1":"recycle.jpg"
+                             },
+                "shopping" : {"name":"shopping",
+                           "picture":"shopping.jpg",
+                        "location" : "grocery store",
+                         "type" : "Type: plastic",
+                         "picture_1":"recycle.jpg"
+                              }
+                             },
+           "bottle" : {
+                 "glass_pop" : {"name":"glass_pop",
+                       "location" : "recycling depot",
+                       "type" : "Type: glass"
+                           },
+                "plastic_pop" : {"name":"plastic_pop",
+                        "location" : "recycling depot",
+                          "type" : "Type: plastic"
+                             }
+                                 },
+           "box" : {
+                   "cardboard" : {"name":"cardboard",
+                         "location" : "recycling bin",
+                         "type" : "Type: paper"
+                   },
+                   "pizza" : {"name":"pizza",
+                         "location" : "compost",
+                         "type" : "Type: organics"
+                       }
+                       }
+                       };
+     
+     
+             let x=" "
+             for (i in data.box ){
+                x+= data.box[i].name + "<br>" +data.box[i].type  + "<br>"  + "<br>" + "<br>" + "<br>" + "<br>" + "<br>"+ "<br>" + "<br>" + "<br>" + "<br>"+ "<br>" + "<br>";
+             }
+     
+               document.getElementById("bag").innerHTML=x ;
+             let y=""
+             for (i in data.box ){
+                y+= data.box[i].location +  "<br>"  + "<br>" + "<br>" + "<br>" + "<br>" + "<br>"+ "<br>"+ "<br>" + "<br>" + "<br>"+ "<br>" + "<br>"+ "<br>" + "<br>" ;
+             }
+     
+               document.getElementById("bag_2").innerHTML=y ;
+     
+             
+             
+     
+             </script>     
+        
+
+       
+        
+        
+    </body>
+</html>
+
+
+
