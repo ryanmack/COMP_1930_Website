@@ -13,65 +13,88 @@
 
 <body>
   <header>
-    <!-- HTML the navigation bar for the navigation bar along the top -->
+  
     <div class="menuBar">
-
-      <ul> 
+    
+      
+    
+      <ul>
+      
       
         <li> <a href="#">recycle.that </a> </li>
-
+      
+ 
+      
+        
+      
         <li> <a href="#"> Home </a> </li>
-
         <li> <a href="#"> About </a> </li>
         
         <li class="dropdown">
-        <!-- HTML elements for the dropdown bar below the recycle-->  
-          <a href="#" class="dropBtn">Recycle</a>
+          
+          <a href="#" class="dropBtn">Drop</a>
           
           <div class="dropdown-content">
           
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+            <a href="./suggestions.html">Suggestions</a>
           
           </div>
           
         </li>
-
-        <li> <a href="#">Suggestions</a></li>
-
+        
         <input type="text" placeholder="Search..">
       
       </ul>
     
     </div>
    
-  </header>
+ </header>
 
     <div id = "main">
     <h1 style = "text-align: center">What are you trying to recycle today?</h1>
-        
-        
-        <!-- Creates the boxes with materials on them -->
         <div class = "rectangle">Paper</div>
         <div class = "rectangle">Plastic/Glass</div>
         <div class = "rectangle">Metal</div>
         <div class = "rectangle">Organics</div>
         <br>
         <br>
-
     <button id = "somethingElse">Something else</button>
-
     <p>I know what I'm looking for; let me search for it</p>
-
-    <!-- The main (only working) search bar -->
     <input type="text" placeholder="Search.." name="search">
     <button type="submit" id = "submit">Search</button>
-    
-  </div>
+    </div>
+
+
+    <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(e) {
+              if (!e.target.matches('.dropbtn')) {
+              var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                  myDropdown.classList.remove('show');
+                }
+              }
+            }
+            </script>
+
+
+
+
+
+
 
 </body>
 
-<script src="./javascript/index.js"></script>
+
+
+
 
 </html>
