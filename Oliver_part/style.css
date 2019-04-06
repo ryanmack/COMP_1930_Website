@@ -1,0 +1,155 @@
+body {
+    font-family: "Roboto";
+    margin: auto;
+    display: block;
+}
+
+#main {
+    text-align: center;
+}
+
+header {
+    background-color: grey;
+    padding: 3px;
+
+}
+
+.menuBar {
+    font-size: 24px;
+    padding: 5px;
+    padding-top: 15px;
+    overflow: hidden;
+}
+
+.menuBar #recycleThat {
+    margin-right: 100px;
+    margin-left: 20px;
+}
+
+.menuBar #home, #about, #recycle {
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.menuBar input {
+    float: right;
+    margin-right: 10px;
+    width: 416px;
+    height: 34px;
+
+    background: #FFFFFF;
+    border-radius: 3px;
+}
+
+
+#search input {
+    float:right;
+}
+
+input {
+    width: 493px;
+    height: 40px;
+
+    background: #FFFFFF;
+    border-radius: 3px;
+}
+
+button {
+    text-align: center;
+}
+
+#submit button  {
+    width: 40px;
+    height: 16px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: normal;
+
+    color: #000000;
+
+}
+
+.rectangle {
+    width: 162px;
+    height: 202px;
+    background: #C4C4C4;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+
+.recycle{
+    position: relative;
+    float: left;
+}
+
+.home{
+    position: relative;
+    
+}
+
+.about{
+    position: relative;
+    
+}
+
+
+
+
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropBtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  }
+
+li a:hover .dropdown:hover .dropBtn {
+  background-color: purple;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: silver;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
