@@ -8,6 +8,21 @@
                     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
                     <title>Document</title>
                     <link rel="stylesheet" href="style.css">
+                    <head>
+                      <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+                      <script>
+                        // Initialize Firebase
+                        var config = {
+                          apiKey: "AIzaSyCJzKlfxZsYKjxzTZhqeVaTVoGl08XQ26M",
+                          authDomain: "recyclables-1930.firebaseapp.com",
+                          databaseURL: "https://recyclables-1930.firebaseio.com",
+                          projectId: "recyclables-1930",
+                          storageBucket: "recyclables-1930.appspot.com",
+                          messagingSenderId: "966981118712"
+                        };
+                        firebase.initializeApp(config);
+                      </script>
+                      <link rel="stylesheet" href="style.css">
                 
     </head>
         <header>
@@ -18,7 +33,7 @@
                   
                     <li> <a href="#">recycle.that </a> </li>
                   
-                    <li> <a href="#"> Home </a> </li>
+                    <li> <a href="index.html"> Home </a> </li>
                     <li> <a href="#"> About </a> </li>
                     
                     <li class="dropdown">
@@ -59,10 +74,8 @@
         var submitBtn = document.getElementById("submitButton");
 
 
-
         submitBtn.onclick = function()  {
             var suggestion = searchBar.value;
-
             console.log(suggestion);
             document.getElementById("test").innerHTML = suggestion;
         }

@@ -12,89 +12,50 @@
 
 
 <body>
-  <header>
-  
-    <div class="menuBar">
-    
-      
-    
-      <ul>
-      
-      
-        <li> <a href="#">recycle.that </a> </li>
-      
- 
-      
-        
-      
-        <li> <a href="#"> Home </a> </li>
-        <li> <a href="#"> About </a> </li>
-        
-        <li class="dropdown">
-          
-          <a href="#" class="dropBtn">Drop</a>
-          
-          <div class="dropdown-content">
-          
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="./suggestions.html">Suggestions</a>
-          
-          </div>
-          
-        </li>
-        
-        <input type="text" placeholder="Search..">
-      
-      </ul>
-    
-    </div>
-   
- </header>
 
-    <div id = "main">
-    <h1 style = "text-align: center">What are you trying to recycle today?</h1>
-        <div class = "rectangle">Paper</div>
-        <div class = "rectangle">Plastic/Glass</div>
-        <div class = "rectangle">Metal</div>
-        <div class = "rectangle">Organics</div>
-        <br>
-        <br>
+  <!--This creates the menu bar and it's naivagtion-->
+  <header>
+    <div class="menuBar">
+      <ul>
+        <li> <a href="#">recycle.that </a> </li>
+        <li> <a href="index.html"> Home </a> </li>
+        <li> <a href="#"> About </a> </li>
+        <li class="dropdown">
+          <a href="#" class="dropBtn">Drop</a>
+          <div class="dropdown-content">
+            <a href="#">Recycling Website</a>
+            <a href="#">More Items</a>
+            <a href="./suggestions.html">Suggestions</a>
+          </div>
+        </li>
+        <input type="text" placeholder="Search..">
+      </ul>
+    </div>
+  </header>
+
+
+  
+  <div id = "main">
+  <h1 style = "text-align: center">What are you trying to recycle today?</h1>
+  <!--HTML elements for the main page, there are the clickable buttons that brings you to the categories-->
+    <div class = "rectangle" href = "#">Bags</div>
+    <div class = "rectangle"><a href= "#">Bottles</a></div>
+    <div class = "rectangle"><a href= "#">Boxes</a></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--This has no use yet. It is just here.-->
     <button id = "somethingElse">Something else</button>
     <p>I know what I'm looking for; let me search for it</p>
     <input type="text" placeholder="Search.." name="search">
     <button type="submit" id = "submit">Search</button>
-    </div>
-
-
-    <script>
-            /* When the user clicks on the button, 
-            toggle between hiding and showing the dropdown content */
-            function myFunction() {
-              document.getElementById("myDropdown").classList.toggle("show");
-            }
-            
-            // Close the dropdown if the user clicks outside of it
-            window.onclick = function(e) {
-              if (!e.target.matches('.dropbtn')) {
-              var myDropdown = document.getElementById("myDropdown");
-                if (myDropdown.classList.contains('show')) {
-                  myDropdown.classList.remove('show');
-                }
-              }
-            }
-            </script>
-
-
-
-
-
-
-
+  </div>
 </body>
 
-
-
-
+<script src="/javascript/index.js"></script>
 
 </html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+            <script>
+              // Initialize Firebase
+              var config = {
+                apiKey: "AIzaSyCJzKlfxZsYKjxzTZhqeVaTVoGl08XQ26M",
+                authDomain: "recyclables-1930.firebaseapp.com",
+                databaseURL: "https://recyclables-1930.firebaseio.com",
+                projectId: "recyclables-1930",
+                storageBucket: "recyclables-1930.appspot.com",
+                messagingSenderId: "966981118712"
+              };
+              firebase.initializeApp(config);
+            </script>
+            <link rel="stylesheet" href="style.css">
+    </head>
+    <style>
+        .flex{
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          border:3px solid;
+          margin: 70px;
+          padding: 150px;
+          height: 380px; 
+          width: 850px;
+          /* padding-left:150px; */
+          margin-left: 150px;
+   
+         
+        }
+
+
+         
+        #box{
+          font-family: fantasy;
+          position:absolute;
+          top:150px;
+          left:330px;
+          width:50%;
+          padding: 50px;
+        
+  
+        }
+        
+        #images{
+          position:absolute;
+          top:270px;
+          left:330px;
+          width:50%;
+
+
+
+        }
+
+        #box_2{  font-family: fantasy;
+          position:absolute;
+          top:200px;
+          left:900px;
+  
+          margin:auto;
+  
+        }  
+        #where{
+          
+          position:absolute;
+          top:270px;
+          left:850px;
+  
+          margin:auto;
+          
+          visibility: visible;
+  
+        }  
+
+
+
+</style>
+    <body>
+        <header>
+            <div class="menuBar">
+                <ul>
+                    <li> <a href="#">recycle.that </a> </li>
+                    <li> <a href="#"> Home </a> </li>
+                    <li> <a href="#"> About </a> </li>
+                        
+                    <li class="dropdown">
+                          
+                        <a href="#" class="dropBtn">Drop</a>
+                          
+                        <div class="dropdown-content">
+                          
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                          
+                        </div>
+                          
+                    </li>
+                        
+                    <input type="text" placeholder="Search..">  
+                </ul>
+            </div>  
+        </header>
+        <div class="flex">
+
+            <div id="items">
+              <div id="box"><b></b> </div>   
+              <div id="images"></div>
+            </div>
+
+            <div id="garbage" >
+              <div id="box_2"></div>
+              <div id="where">  </div>
+            </div> 
+        
+        </div>
+
+
+    </body>
+    <script>
+        function display_items(category){
+            var dbRef = firebase.database().ref("box/"+category+"/");
+            dbRef.once("value", function(snap){
+                list = snap.val();
+                console.log(list);
+                display_information(list);
+            })
+        }
+
+        function display_information(list){
+            console.log(list.img_name);
+            console.log(list.img_recycle);
+            console.log(list.location);
+            console.log(list.name);
+            console.log(list.type);
+
+
+            //Create name and type of box + format new line
+            var para = document.createElement("div");
+            document.getElementById("box").appendChild(para);
+            para.appendChild(document.createTextNode("Item: " + list.name ));
+            var new_line=document.createElement("br")
+            new_line.setAttribute("style","line-height:1");
+            para.appendChild(new_line)
+            para.appendChild(document.createTextNode( "Type: " + list.type ));
+            var other_new_line=document.createElement("br")                                    
+            other_new_line.setAttribute("style","line-height:18");
+            para.appendChild(other_new_line)
+
+            //Create location + format new line
+            var location = document.createElement("p");
+            document.getElementById("box_2").appendChild(location);
+            location.appendChild(document.createTextNode(" Location: " + list.location ));
+            var another_new_line=document.createElement("br")                                    
+            another_new_line.setAttribute("style","line-height:18");
+            location.appendChild(another_new_line)
+
+
+            //Create images for box
+            x = document.createElement("IMG");
+            console.log("./images/databaseimages/"+list.img_name);
+            x.setAttribute("src", "./images/databaseimages/"+list.img_name);
+            x.setAttribute("height", "180px");
+            x.setAttribute("width", "148px");
+            document.getElementById("images").appendChild(x);
+            z= document.createElement("BR");
+            z.setAttribute("style","line-height:8");
+            document.getElementById("images").appendChild(z);
+
+
+            //Create images for recycle location
+            y = document.createElement("IMG");
+            y.setAttribute("src", "./images/"+list.img_recycle);
+            y.setAttribute("height", "180px");
+            y.setAttribute("width", "148px");
+            document.getElementById("where").appendChild(y);
+            line= document.createElement("BR");
+            line.setAttribute("style","line-height:8");
+            document.getElementById("where").appendChild(line);
+
+            }
+        
+
+
+        display_items("cardboard");
+        display_items("pizza");
+    </script>
+</html>
