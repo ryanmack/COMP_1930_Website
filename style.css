@@ -4,7 +4,7 @@
 
 /* Styling for the navigation bar begins here */
 header {
-  background-color: grey;
+  background-color: #bbd47f;
   padding: 3px;
 }
 
@@ -54,9 +54,11 @@ button {
   height: 16px;
   font-style: normal;
   font-weight: normal;
-  font-size: 13px;
+  font-size: 16px;
   line-height: normal;
-  color: #000000;
+  background-color: #4cc9b4;
+  color: white;
+
 
 }
 
@@ -67,7 +69,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: black;
+  background: transparent;
 }
 
 li {
@@ -93,7 +95,7 @@ li.dropdown {
 .dropdown-content {
   display: none;
   position: absolute;
-  background: silver;
+  background: #eaffc4;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -108,7 +110,7 @@ li.dropdown {
 }
 
 .dropdown-content a:hover {
-  background: #f1f1f1;
+  background: #eaffe2;
 }
 
 .dropdown:hover .dropdown-content {
@@ -128,6 +130,7 @@ body {
   font-family: "Roboto";
   margin: auto;
   display: block;
+  background-color: #eaffc4
 }
 
 #main {
@@ -137,7 +140,7 @@ body {
 .rectangle {
     width: 162px;
     height: 202px;
-    background: #C4C4C4;
+    background: #4cc9b4;
     border-radius: 4px;
     display: inline-block;
     margin-right: 6px;
