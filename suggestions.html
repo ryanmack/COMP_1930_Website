@@ -35,18 +35,64 @@
 </head>
 
 <body>  
+  <header>
+
+    <div class="menuBar">
+
+      <ul> <!-- Unordered list, items are the options on the navigation bar-->
+        
+        <li> <a href="#">recycle.that </a> </li> <!-- our "logo"-->
+
+        <li> <a href="index.html"> Home </a> </li> <!--leads back to the index page-->
+
+        <li> <a href="#"> About </a> </li> <!-- does nothing -->
+        
+        <li class="dropdown"> <!-- The dropdown bar -->
+          <a href="#" class="dropBtn">Other Information</a> <!-- What the user sees when not hovering -->
+          <div class="dropdown-content"> <!-- Content for when you hover over the dropdown bar-->
+            <a href="https://www.return-it.ca/locations/lower-mainland-and-fraser-valley/">Return-IT! Depot Website</a>
+            <a href="./suggestions.html">Suggestions</a>
+          </div>
+        </li>
+        
+        <input type="text" placeholder="Search.."> <!-- does nothing, is here just for looks. floats on the right hand side -->
+      </ul>
+
+    </div>
+
+  </header>
+
+  <br>
+  <br>
+  <br>
+  <br>
 
   <!-- Creates the space for the search bar where users can enter suggestions-->
   <input type="search" id="mySearchbar" placeholder="Item Suggestion"/>
 
   <!-- Creates the "Enter button" -->
-  <input type="submit" id="submitButton" value="Enter"/>
+  <button type="submit" id="submitButton" value="Enter"/>Enter</button>
 
 </body>
 
 
 <!-- JavaScript Soruce for the code for this page-->
-<script src="javascript/suggestions.js"></script>
-<!-- JavaScript Source for the dropdown in header-->
-<script src="./javascript/dropdown.js"></script>
+<script>
+
+// contains the JavaScript code for the suggestion page
+
+
+var searchBar = document.getElementById("mySearchbar"); // grabs the information that is currently in the search bar
+var submitBtn = document.getElementById("submitButton"); 
+
+// writes whatever is in the searh bar into the database
+
+submitBtn.onclick = function()  {
+    var suggestion = searchBar.value;
+    console.log(suggestion);
+    firebase.database().ref("suggestions/" + suggestion).set({
+      suggestion: "website",
+    });
+}   
+</script>
 </html>
