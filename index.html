@@ -1,38 +1,91 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class = "menuBar">
-            <a id = 'recycleThat' style = "font-size: 36px">recycle.that            </a>
-            <div href = "C:\Users\Ryan Hunt\OneDrive\BCIT\COMP 1510\COMP_1930_Website\Compost green bin.html"><a id = 'home'>Home</a></div>
-            <a id = "about">About</a>
-            <a id = "recycle">Recycle</a>
-            <input type="text" placeholder="Search..">
-        </div>
-    </header>
 
-    <div id = "main">
+  <!-- Styling Template and information -->
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  
+  <!-- Style Sheet-->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Title of our page -->
+  <title>Recycle.that</title>
+
+</head>
+
+
+<body>
+
+  <!--This creates the menu bar and it's naivagtion-->
+  <header>
+
+      <div class="menuBar">
+  
+        <ul> <!-- Unordered list, items are the options on the navigation bar-->
+          
+          <li> <a href="#">recycle.that </a> </li> <!-- our "logo"-->
+  
+          <li> <a href="index.html"> Home </a> </li> <!--leads back to the index page-->
+  
+          <li> <a href="#"> About </a> </li> <!-- does nothing -->
+          
+          <li class="dropdown"> <!-- The dropdown bar -->
+            <a href="#" class="dropBtn">Other Information</a> <!-- What the user sees when not hovering -->
+            <div class="dropdown-content"> <!-- Content for when you hover over the dropdown bar-->
+              <a href="https://www.return-it.ca/locations/lower-mainland-and-fraser-valley/">Return-IT! Depot Website</a>
+              <a href="./suggestions.html">Suggestions</a>
+            </div>
+          </li>
+          
+          <input type="text" placeholder="Search.."> <!-- does nothing, is here just for looks. floats on the right hand side -->
+        </ul>
+  
+      </div>
+  
+  </header>
+
+
+  
+  <div id = "main">
     <h1 style = "text-align: center">What are you trying to recycle today?</h1>
-        <div class = "rectangle">Paper</div>
-        <div class = "rectangle">Plastic/Glass</div>
-        <div class = "rectangle">Metal</div>
-        <div class = "rectangle">Organics</div>
-        <br>
-        <br>
-    <button id = "somethingElse">Something else</button>
+
+    <!--HTML elements for the main page, these are the clickable buttons/rectangles that brings you to the categories' own page-->
+    <div class = "rectangle" onclick="location.href='bag_search.html'">
+      Bags
+      <img class="rectangle_image" src="images/indeximages/bag.jpg"><img>
+    </div>
+    
+    <div class = "rectangle" onclick="location.href='bottle_search.html'">
+      Bottles<img class="rectangle_image" src="images/indeximages/bottles.png"> </img>
+    </div>
+    
+    <div class = "rectangle" onclick="location.href='box_search.html'">
+      Boxes
+      <img class="rectangle_image" src="images/indeximages/boxes.png"></img>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!--Creates the search bar for items. This has no use yet. It is just here.-->
     <p>I know what I'm looking for; let me search for it</p>
     <input type="text" placeholder="Search.." name="search">
     <button type="submit" id = "submit">Search</button>
-    </div>
+  
+  </div>
 
 </body>
+
+<!-- Link to Script sources -->
+<script src="./javascript/index.js"></script>
+<script src="./javascript/dropdown.js"></script>
 </html>

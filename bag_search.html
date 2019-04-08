@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Styling Template and information -->
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  
+  <!-- Style Sheet-->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Title of our page -->
+  <title>Recycle.that</title>
+
+
+  <!-- firebase information -->
+  <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCJzKlfxZsYKjxzTZhqeVaTVoGl08XQ26M",
+    authDomain: "recyclables-1930.firebaseapp.com",
+    databaseURL: "https://recyclables-1930.firebaseio.com",
+    projectId: "recyclables-1930",
+    storageBucket: "recyclables-1930.appspot.com",
+    messagingSenderId: "966981118712"
+  };
+    firebase.initializeApp(config);
+  </script>
+
+  <!-- Style Sheet-->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+    
+<body>
+
+
+  <!--This creates the menu bar and it's naivagtion-->
+  <header>
+
+    <div class="menuBar">
+
+      <ul> <!-- Unordered list, items are the options on the navigation bar-->
+        
+        <li> <a href="#">recycle.that </a> </li> <!-- our "logo"-->
+
+        <li> <a href="index.html"> Home </a> </li> <!--leads back to the index page-->
+
+        <li> <a href="#"> About </a> </li> <!-- does nothing -->
+        
+        <li class="dropdown"> <!-- The dropdown bar -->
+          <a href="#" class="dropBtn">Other Information</a> <!-- What the user sees when not hovering -->
+          <div class="dropdown-content"> <!-- Content for when you hover over the dropdown bar-->
+            <a href="https://www.return-it.ca/locations/lower-mainland-and-fraser-valley/">Return-IT! Depot Website</a>
+            <a href="./suggestions.html">Suggestions</a>
+          </div>
+        </li>
+        
+        <input type="text" placeholder="Search.."> <!-- does nothing, is here just for looks. floats on the right hand side -->
+      </ul>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- this is where the items and the recycling location will be appended. -->
+  <div class="flex"> 
+
+    <div id="items"> <!-- items being recycled and its information is appended here-->
+      <div id="box"><b></b> </div>   
+      <div id="images"></div>
+    </div>
+
+    <div id="garbage"> <!-- where to recycle the items and recycling information appended here -->
+      <div id="box_2"></div>
+      <div id="where">  </div>
+    </div> 
+        
+  </div>
+
+
+</body>
+
+<!-- JavaScript Source for reading the database-->
+<script src="javascript/info_read.js" ></script>
+<!-- JavaScript source for displaying box items-->
+<script src="./javascript/bag.js"></script>
+<!-- JavaScript Source for the dropdown in header-->
+<script src="./javascript/dropdown.js"></script>
+</html>
