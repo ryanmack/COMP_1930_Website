@@ -21,10 +21,9 @@
         <li> <a href="index.html"> Home </a> </li>
         <li> <a href="#"> About </a> </li>
         <li class="dropdown">
-          <a href="#" class="dropBtn">Drop</a>
+          <a href="#" class="dropBtn">Other Information</a>
           <div class="dropdown-content">
-            <a href="#">Recycling Website</a>
-            <a href="#">More Items</a>
+            <a href="https://www.return-it.ca/locations/lower-mainland-and-fraser-valley/">Return-IT! Depot Website</a>
             <a href="./suggestions.html">Suggestions</a>
           </div>
         </li>
@@ -37,10 +36,10 @@
   
   <div id = "main">
   <h1 style = "text-align: center">What are you trying to recycle today?</h1>
-  <!--HTML elements for the main page, there are the clickable buttons that brings you to the categories-->
-    <div class = "rectangle" href = "#">Bags</div>
-    <div class = "rectangle"><a href= "#">Bottles</a></div>
-    <div class = "rectangle"><a href= "#">Boxes</a></div>
+  <!--HTML elements for the main page, these are the clickable buttons that brings you to the categories-->
+    <div class = "rectangle" onclick="location.href='bag_search.html'">Bags<img class="rectangle_image" src="images/indeximages/bag.jpg"><img></div>
+    <div class = "rectangle" onclick="location.href='bottle_search.html'">Bottles<img class="rectangle_image" src="images/indeximages/bottles.png"> </img></div>
+    <div class = "rectangle" onclick="location.href='box_search.html'">Boxes<img class="rectangle_image" src="images/indeximages/boxes.png"> </img></div>
     <br>
     <br>
     <br>
@@ -56,6 +55,7 @@
   </div>
 </body>
 
-<script src="/javascript/index.js"></script>
-
+<!-- Link to Script sources -->
+<script src="./javascript/index.js"></script>
+<script src="./javascript/dropdown.js"></script>
 </html>

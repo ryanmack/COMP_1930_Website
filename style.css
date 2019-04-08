@@ -78,6 +78,15 @@ button {
     border-radius: 4px;
     display: inline-block;
     margin-right: 6px;
+    overflow: hidden;
+}
+
+.rectangle_image{
+  width: 130px;
+  height: 150px;
+  position: relative;
+  border-radius: 4px;
+  top: 10px;
 }
 
 
@@ -95,6 +104,80 @@ button {
     position: relative;
     
 }
+
+
+
+.flex{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border:3px solid;
+  margin: 70px;
+  padding: 150px;
+  height: 380px; 
+  width: 850px;
+  margin-left: 150px;
+
+ 
+}
+
+
+ 
+#box{
+  font-family: fantasy;
+  position:absolute;
+  top:150px;
+  left:310px;
+  width:50%;
+  padding: 50px;
+
+
+}
+
+#images{
+  position:absolute;
+  top:270px;
+  left:330px;
+  width:50%;
+
+
+
+}
+
+#box_2{  font-family: fantasy;
+  position:absolute;
+  top:200px;
+  left:870px;
+
+  margin:auto;
+
+}  
+#where{
+  
+  position:absolute;
+  top:270px;
+  left:850px;
+
+  margin:auto;
+  
+  visibility: visible;
+
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
